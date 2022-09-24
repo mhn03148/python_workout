@@ -1,16 +1,16 @@
-# This is a sample Python script.
+import random
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+def guessing_game():
+    number = random.randint(10,30) #10~30(30포함) 범위의 정수 생성
 
+    while True:
+        i = int(input()) #input 함수는 항상 문자열을 리턴, int형으로 받아야 비교 가능
+        if number > i:
+            print("Too low")
+        elif number < i:
+            print("Too high")
+        elif i == number:
+            print("just right")
+            break
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+guessing_game()
