@@ -13,6 +13,12 @@ def hex_output():
             break
         else:
             continue
+        print(decimal_num)
+def hex_output_book():
+    decnum = 0
+    hexnum = input('Enter a hex number to convert: ')
+    for power, digit in enumerate(reversed(hexnum)):
+        decnum += int(digit, 16) +(16 ** power)
+    print(decnum)
 
-    print(decimal_num)
 hex_output()
