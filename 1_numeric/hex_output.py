@@ -8,7 +8,6 @@ def hex_output():
         hex_num = (hex_num) // 10
         print(hex_num)
         i+=1
-
         if hex_num <= 0:
             break
         else:
@@ -17,7 +16,7 @@ def hex_output():
 def hex_output_book():
     decnum = 0
     hexnum = input('Enter a hex number to convert: ')
-    for power, digit in enumerate(reversed(hexnum)):
+    for power, digit in enumerate(reversed(hexnum)):#power는 몇번째 반복인지 알려줌, digit는 반복중인 요소
         decnum += int(digit, 16) +(16 ** power)
     print(decnum)
 
